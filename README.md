@@ -1,5 +1,6 @@
-/**ahk_thread, Receive && Pass**\
-Receives or Sends Data from or to another ahk script\ahk thread.
+ahk_thread, Receive && Pass*
+-
+- Receives or Sends Data from or to another ahk script\ahk thread.
 	`ahk_threadReceive(GroupID, Callback:=false)`
 	`ahk_threadPass(GroupID, StringToSend, TimeOut)`
   
@@ -10,34 +11,34 @@ ahk_threadReceive  | GroupID |
 - Random gabldy guck is the best. Example: "w23jK65FdQ"
 - I recomend using a string about 10 charactors long. Though it can be as long as short or you'd like.
 - The GroupID is like a scripts phone number, If you have a phone and number you can reveive calls.
-;-------------------
+
 
 ahk_threadPass  | GroupID |
 -
 - Specify the GroupID of your receiving script.
 - Example From above: "w23jK65FdQ"
 - The GroupID is like a scripts phone number, If you have a phone and know some ones phone number you can call the them.
-;-------------------
+
 
 ahk_threadReceive  | Callback |
 -
 - Specify a Function to call back when a message is received.
 - The function you use must have one call back pram, or have the rest of the prams optional.
 - If omitted and a Callback has already been specified with a GroupID, when calling only that GroupID with no Callback the GroupID will be deleted and nolonger call to its Callback. Sort of like smashing your phone so no one can call you.
-;-------------------
+
 
 ahk_threadPass  | StringToSend |
 -
 - Specify a String or var to send its contents.
 - If omitted a 1 (True) is sent. Keep in mind you can use these Pass\Receive just to trigger a function in one script because another script told it to nothing needs to be passed.
-;-------------------
+
 
 ahk_threadPass  | TimeOut |
 -
 - Specify a the number of Milliseconds to wait for another script to receive the call and return it. 2 is the lowest value if you set it lower it will default back to 2.
 - If omitted it will default to 10ms almost instant.
 - For good mesure omit this or specify nothing lower than 10ms because of the OS speed, I really have no Idea how fast an OS is at this stuff so don't take my word for it.
-;-------------------
+
 
 ahk_threadReceive	Notes:
 - 
@@ -53,18 +54,18 @@ ahk_threadPass	Notes:
 -
 - (1) If an Integer is sent it will be converted to a string, Don't worry it still works as a true or false statment a String 0 is the same as a integer 0 for if statments.
 - (2) A Pass and Receive work exactly the same if you have them in the same script as if you have them in seperate scripts.
-;-------------------
+
 
 ahk_threadPass	Return Value:
 -
 - If a pass is sucessful with in the TimeOut it returns a 1 (True). Else a 0 (False).
-;-------------------
+
 
 ahk_threadReceive	Return Value:
 -
 - When creating a Callback to a GroupID if the GroupID happens to be the name of a window that already exists a 0 (False) is returned and nothing happens. Else a 1 (True) is returned.
 - When deleting a GroupID by specifing a GroupID but not specifing a Callback. If the GroupID exists it will return 1 (True) Else if it does not 0 (False) is returned.
-;-------------------
+
 
 
 Example:
@@ -81,7 +82,6 @@ Msgbox(Data)
 
 ahk_threadPass("w23jK65FdQ", "A String to pass") ; The script can pass to its self not just other scripts
 ```
-;-------------------
 
 
 - ;#2 Shows how closing the GroupID will stop a message from coming through.
@@ -102,7 +102,6 @@ SomeFunc(Data)
 Msgbox(Data)
 }
 ```
-;-------------------
 
 
 - ;#3 Passes a message and returns the result. Try running the 2 normal and the changing the GroupID of one of them to see it show a different result.
@@ -125,5 +124,4 @@ Msgbox("The Script with a GroupID w23jK65FdQ has responed and told me it got my 
 Msgbox("No one responded, Prehaps there not at the phone right now...")
 }
 ```
-;-------------------
-\*******************************/
+
