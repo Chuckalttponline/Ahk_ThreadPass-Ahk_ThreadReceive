@@ -1,8 +1,9 @@
 ahk_thread, Receive && Pass
 -
 - Receives or Sends Data from or to another ahk script\ahk thread.
-	`ahk_threadReceive(GroupID, Callback:=false)`
-	`ahk_threadPass(GroupID, StringToSend, TimeOut)`
+
+`ahk_threadReceive(GroupID, Callback:=false)`
+`ahk_threadPass(GroupID, StringToSend, TimeOut)`
   
 
 ahk_threadReceive  | GroupID |
