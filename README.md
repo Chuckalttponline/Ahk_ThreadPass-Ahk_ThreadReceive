@@ -48,6 +48,7 @@ ahk_threadReceive	Notes:
 - (3) A GroupID can be deleted down nolonger calling its function Callback.
 - (4) A GroupID can be reinitalized by specifing the GroupID and the CallBack But only with the function it started with, Specifing another function will just reinitalize the old one.
 - (5) A Pass and Receive work exactly the same if you have them in the same script as if you have them in seperate scripts.
+- (6) Have as many function Callbacks with GroupIDs as you want. Kind of like a buisness has a lot of phone numbers and operators.
 
 ;-----; This Function was based off of the OnMessage page in the AutoHotkey v2 Docs Example #4, Which only worked for uncompiled scripts and wasn't a simple function. I've modified, perfected and added to it.
 
