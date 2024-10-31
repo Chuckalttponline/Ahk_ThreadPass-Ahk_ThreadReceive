@@ -140,8 +140,8 @@ ahk_threadReceive(GroupID, Callback:=false)
 		Return 0
 	}
 	
-MG := Gui("-Caption -Border", GroupID)
-MG.Show("x0 y0 w0 h0 NoActivate")
+LksjeU88eKKw0Jkl := Gui("-Caption -Border", GroupID)
+LksjeU88eKKw0Jkl.Show("x0 y0 w0 h0 NoActivate")
 WinHide(GroupID)
 OnMessage 0x004A, Receive_WM_COPYDATA  ; 0x004A is WM_COPYDATA
 Receive_WM_COPYDATA(wParam, lParam, msg, hwnd)
